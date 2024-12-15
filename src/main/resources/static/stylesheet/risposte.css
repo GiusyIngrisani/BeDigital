@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+:root {
+    --bg-color: #121b37;
+    --text-color: #f2f2f2;
+    --main-color: #30478c;
+    --second-color: #273a73;
+    --notify-color: #5b6ed9;
+    --white-color: white;
+    --aggiuntivo1: #33df3c;
+    --aggiuntivo2: #ffa900;
+    --aggiuntivo3: red;
+    --aggiuntivo4: #b700ff;
+}
+
+
+.risposte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    background-size: contain;
+    background: #edecec63;
+}
+
+.risposte .box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 120px;
+}
+
+.none {
+    display: none;
+}
+
+.risposte .box h2 {
+    text-align: center;
+    background-color: var(--second-color);
+    padding: 22px 0;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+}
+
+.corrette {
+    color: var(--aggiuntivo1);
+}
+
+.sbagliate {
+    color: var(--aggiuntivo3);
+}
+
+
+.livello {
+    font-size: 35px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #121b37;
+    padding: 0 5px;
+}
+
+.risposte table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notspecial {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: var(--second-color);
+}
+
+.notspecial th {
+    padding: 15px 0;
+}
+
+.special {
+    background-color: white;
+    color: var(--bg-color);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.special td {
+    padding: 10px 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.risposte p {
+    margin-bottom: 180px;
+    font-size: 20px;
+    color: var(--white-color);
+    font-weight: 500;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.risposte td a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.risposte i:hover {
+    color: var(--white-color);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.risposte_btn {
+    width: 250px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 0;
+    color: var(--white-color);
+    background-color: var(--notify-color);
+    border: 3px solid var(--notify-color);
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+.risposte_btn:hover {
+    background-color: white;
+    color: var(--notify-color);
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lista Lezioni</title>
+    <link rel="stylesheet" th:href="@{/stylesheet/listaLezioni.css}" type="text/css"/>
+    <link href="/img/Logo.png" rel="shortcut icon"/>
+</head>
+<body>
+<th:block th:insert="~{fragments/header}"></th:block>
+<div class="lezioni">
+    <th:block th:if="${tipo}=='lezioniPrivacy'">
+        <h1 class="livello">Lezioni sulla Privacy e Sicurezza Online</h1>
+    </th:block>
+    <th:block th:if="${tipo}=='lezioniIntelligenza'">
+        <h1 class="livello">Lezioni sull'Intelligenza Artificiale</h1>
+    </th:block>
+    <th:block th:if="${tipo}=='lezioniDaStudiare'">
+        <h1 class="livello">Le tue lezioni</h1>
+        <p>Qui sono riportate le nostre lezioni sugli argomenti da te sbagliati al test.</p>
+    </th:block>
+    <th:block th:if="${tipo}=='lezioniCittadinanza'">
+        <h1 class="livello">Cittadinanza digitale</h1>
+        <p>Qui sono riportate tutti quegli argomenti che riguardano l'educazione di tutte le fasce di età <br> a un uso
+            più consapevole del web, nel rispetto di noi stessi e di chi ci sta in torno.</p>
+    </th:block>
+
+    <th:block th:each="instance: ${lezioniPerMetaInfo}">
+        <div class="box">
+            <div style="width: 100%">
+                <img class="right" th:src="@{/icona(idMetaInfo=${instance.key.id})}">
+                <h2 th:text="${instance.key.keyword}"></h2>
+            </div>
+            <ul>
+                <th:block th:each="arg, istat: ${instance.value}">
+                    <li>
+                        <div class="box-lezione">
+                            <div class="num-title">
+                                <span th:text="${istat.count}"></span>
+                                <a th:href="@{/argomento(id=${arg.id})}"
+                                   th:text="${arg.titolo}">
+                                </a>
+                            </div>
+                            <div class="livello-box">
+                                <h4 class="livello-lezione" th:text="'Livello lezione: '+ ${instance.key.getLivello()}"></h4>
+                            </div>
+                        </div>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+    </th:block>
+
+
+</div>
+<th:block th:insert="~{fragments/footer}"></th:block>
+</body>
+</html>

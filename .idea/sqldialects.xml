@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$USER_HOME$/Desktop/TESI/flashcard.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Downloads/classe.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Downloads/gruppo.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Downloads/persona.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Downloads/team.sql" dialect="MySQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>
