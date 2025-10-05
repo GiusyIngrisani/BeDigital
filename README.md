@@ -37,8 +37,10 @@ Follow these steps:
 3. Clone this repo;
 4. Go into BeingDigital directory;
 5. Run `./mwnw (or .\mvnw.cmd if you're on windows) clean package` and wait for maven to build;
-6. Run `java -jar target/BeingDigital-1.0.jar –spring.datasource.password="<password_database>"
-   –spring.datasource.username="<username_database>"`;
+6. Run `java -jar target/BeingDigital-1.0.jar \
+  --spring.datasource.url=jdbc:mysql://localhost:3306/be_digital_db \
+  --spring.datasource.username=root \
+  --spring.datasource.password=giusy2001`;
 7. Open your browser at `localhost:8080`.
 
 ## Built With

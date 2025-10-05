@@ -14,3 +14,4 @@ public interface ArgomentoRepository extends JpaRepository<Argomento, Long> {
 
     void deleteByMetaInfo(MetaInfo metaInfo);
 }
+

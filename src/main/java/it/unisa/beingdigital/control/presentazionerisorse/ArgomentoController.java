@@ -43,7 +43,7 @@ public class ArgomentoController {
     Optional<Argomento> optional = prelievoArgomentoService.getArgomento(id);
 
     Optional<Argomento> nextArgomento = prelievoArgomentoService.getArgomento(id + 1);
-    Optional<Argomento> lastArgomento = prelievoArgomentoService.getArgomento(id - 1);
+   Optional<Argomento> lastArgomento = prelievoArgomentoService.getArgomento(id - 1);
 
     if (optional.isEmpty()) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
